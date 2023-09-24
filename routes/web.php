@@ -41,7 +41,9 @@ Route::get('/', function (HttpRequest $request) {
     return view('index',['question' => $question]);
 });
 Route::get('genrate', [RiskAnalysisController::class, 'show']);
-
+Route::get('/thankyou', function () {
+    return view('thankyou');
+});
 Auth::routes();
 
 Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

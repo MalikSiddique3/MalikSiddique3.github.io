@@ -19,7 +19,7 @@
                                 <label for="answer">Your Answer:</label>
                                 <textarea class="form-control" id="answer" name="answer" rows="4" required></textarea>
                             </div>
-                           <a href="?id={{$question->id + 1}}"><button type="button" class="btn btn-primary">Next</button></a>
+                           <a href="?id={{$question->id + 1}}"><button type="button" class="btn btn-primary" id="next">Next</button></a>
                             
                     </div>
                 </div>
@@ -64,6 +64,7 @@
          else
          {
          document.getElementById("response").classList.add("alert-danger");
+         document.getElementById("next").classList.add("disabled");
          }
         
      }
